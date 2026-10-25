@@ -1,0 +1,93 @@
+# --- Q1: Basic If Condition ---
+num = int(input("Q1 Enter a number: "))
+if num > 0:
+    print("Q1: The number is positive.")
+
+# --- Q2: If-Else Decision Making (Even/Odd) ---
+if num % 2 == 0:
+    print("Q2: Even Number")
+else:
+    print("Q2: Odd Number")
+
+# --- Q3: Multiple Conditions using elif (Grading) ---
+marks = int(input("Q3 Enter marks: "))
+if marks >= 90:
+    print("Q3 Grade: A")
+elif marks >= 75:
+    print("Q3 Grade: B")
+elif marks >= 50:
+    print("Q3 Grade: C")
+else:
+    print("Q3 Grade: Fail")
+
+# --- Q4: Nested If Statements (Voting Eligibility) ---
+age = int(input("Q4 Enter age: "))
+nat = input("Q4 Enter nationality: ")
+if age >= 18:
+    if nat.lower() == "indian":
+        print("Q4: Eligible to vote.")
+    else:
+        print("Q4: Must be an Indian citizen to vote.")
+else:
+    print("Q4: Underage for voting.")
+
+# --- Q5: Largest of Three Numbers ---
+a, b, c = 25, 40, 40
+if a >= b and a >= c:
+    print("Q5 Largest:", a)
+elif b >= a and b >= c:
+    print("Q5 Largest:", b)
+else:
+    print("Q5 Largest:", c)
+
+# --- Q6: Leap Year Checker ---
+year = 2024
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"Q6: {year} is a Leap Year")
+else:
+    print(f"Q6: {year} is not a Leap Year")
+
+# --- Q7: Simple Calculator using Conditions ---
+x, y, op = 15, 3, "*"
+if op == "+":
+    print("Q7 Result:", x + y)
+elif op == "-":
+    print("Q7 Result:", x - y)
+elif op == "*":
+    print("Q7 Result:", x * y)
+elif op == "/":
+    print("Q7 Result:", x / y if y != 0 else "Division by zero")
+else:
+    print("Q7: Invalid Operator")
+
+# --- Q8: Discount Eligibility System ---
+amt = float(input("Q8 Enter purchase amount: "))
+if amt >= 2000:
+    amt *= 0.80  # 20% discount
+elif amt >= 1000:
+    amt *= 0.90  # 10% discount
+print("Q8 Final Payable Amount:", amt)
+
+# --- Q9: Triangle Type Identifier ---
+s1, s2, s3 = 5, 5, 8
+if s1 == s2 == s3:
+    print("Q9: Equilateral Triangle")
+elif s1 == s2 or s2 == s3 or s1 == s3:
+    print("Q9: Isosceles Triangle")
+else:
+    print("Q9: Scalene Triangle")
+
+# --- Q10: Menu-Driven Program ---
+print("\n--- Q10 MENU ---\n1. Check Even/Odd\n2. Find Largest of Two\n3. Pass/Fail Check")
+choice = int(input("Enter choice (1-3): "))
+if choice == 1:
+    n = int(input("Enter number: "))
+    print("Even" if n % 2 == 0 else "Odd")
+elif choice == 2:
+    n1, n2 = int(input("Enter n1: ")), int(input("Enter n2: "))
+    print("Largest:", max(n1, n2))
+elif choice == 3:
+    m = int(input("Enter marks: "))
+    print("Pass" if m >= 40 else "Fail")
+else:
+    print("Invalid Choice")
